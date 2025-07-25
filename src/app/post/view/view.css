@@ -1,0 +1,13 @@
+.action-buttons {
+  margin-top: 20px;
+}
+
+.edit-btn {
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+  transform: scale(1.05);
+}

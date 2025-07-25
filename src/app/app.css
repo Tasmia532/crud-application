@@ -1,0 +1,25 @@
+.app-title {
+  text-align: center;
+  font-size: 2.3 rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 500;
+  padding: 4px 6px;
+}
+.nav a:hover {
+  text-decoration: underline;          /* <-- hover effect */
+  color: #0a58ca;
+}
+.nav a.active {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 760px;
+  margin: 24px auto;
+}

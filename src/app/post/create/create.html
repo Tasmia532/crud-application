@@ -1,0 +1,29 @@
+<div class="card">
+  <h2>Create Post</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" formControlName="title" class="form-control">
+      <span *ngIf="f['title'].touched && f['title'].invalid" class="error">
+        Title is required.
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label>Body</label>
+      <textarea formControlName="body" class="form-control" rows="4"></textarea>
+      <span *ngIf="f['body'].touched && f['body'].errors?.['required']" class="error">
+        Body is required.
+      </span>
+      <span *ngIf="f['body'].touched && f['body'].errors?.['minlength']" class="error">
+        Body must be at least 10 characters.
+      </span>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">
+      Add Post
+    </button>
+    <a routerLink="/posts" class="btn btn-link">Cancel</a>
+  </form>
+</div>
